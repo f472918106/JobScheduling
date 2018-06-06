@@ -1,0 +1,45 @@
+
+EVETNQUEUE:
+     34, jobcreate   , id=   1
+     34, jobschedule , id=   1
+     71, jobcreate   , id=   2
+     97, jobexit     , id=   1
+     97, jobschedule , id=   2
+     99, jobcreate   , id=   3
+    115, jobcreate   , id=   4
+    125, jobexit     , id=   2
+    125, jobschedule , id=   3
+    159, jobcreate   , id=   5
+    195, jobcreate   , id=   6
+    216, jobexit     , id=   3
+    216, jobschedule , id=   4
+    232, jobcreate   , id=   7
+    275, jobcreate   , id=   8
+    276, jobexit     , id=   4
+    276, jobschedule , id=   6
+    303, jobexit     , id=   6
+    303, jobschedule , id=   5
+    325, jobcreate   , id=   9
+    347, jobcreate   , id=  10
+    367, jobexit     , id=   5
+    367, jobschedule , id=   8
+    394, jobexit     , id=   8
+    394, jobschedule , id=   7
+    435, jobexit     , id=   7
+    435, jobschedule , id=  10
+    472, jobexit     , id=  10
+    472, jobschedule , id=   9
+    545, jobexit     , id=   9
+JOBQUEUE:
+id= 1, create=  34, run=  63, exit=  97, turnad=  63, weightedturnad=  1.00. 
+id= 2, create=  71, run=  28, exit= 125, turnad=  54, weightedturnad=  1.93. 
+id= 3, create=  99, run=  91, exit= 216, turnad= 117, weightedturnad=  1.29. 
+id= 4, create= 115, run=  60, exit= 276, turnad= 161, weightedturnad=  2.68. 
+id= 6, create= 195, run=  27, exit= 303, turnad= 108, weightedturnad=  4.00. 
+id= 5, create= 159, run=  64, exit= 367, turnad= 208, weightedturnad=  3.25. 
+id= 8, create= 275, run=  27, exit= 394, turnad= 119, weightedturnad=  4.41. 
+id= 7, create= 232, run=  41, exit= 435, turnad= 203, weightedturnad=  4.95. 
+id=10, create= 347, run=  37, exit= 472, turnad= 125, weightedturnad=  3.38. 
+id= 9, create= 325, run=  73, exit= 545, turnad= 220, weightedturnad=  3.01. 
+CPU:
+HRN , busy= 511, free=  34, jobnumber= 10, turnaround= 137, wturnaround=  2.99

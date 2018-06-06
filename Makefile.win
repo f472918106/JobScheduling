@@ -1,0 +1,40 @@
+# Project: JobScheduling
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = cpu.o event.o handle.o job.o jobsch.o
+LINKOBJ  = cpu.o event.o handle.o job.o jobsch.o
+LIBS     = -L"D:/Tools/DevC++/Dev-Cpp/MinGW64/lib" -L"D:/Tools/DevC++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/include" -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/include" -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Tools/DevC++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = JobScheduling.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+cpu.o: cpu.c
+	$(CC) -c cpu.c -o cpu.o $(CFLAGS)
+
+event.o: event.c
+	$(CC) -c event.c -o event.o $(CFLAGS)
+
+handle.o: handle.c
+	$(CC) -c handle.c -o handle.o $(CFLAGS)
+
+job.o: job.c
+	$(CC) -c job.c -o job.o $(CFLAGS)
+
+jobsch.o: jobsch.c
+	$(CC) -c jobsch.c -o jobsch.o $(CFLAGS)
